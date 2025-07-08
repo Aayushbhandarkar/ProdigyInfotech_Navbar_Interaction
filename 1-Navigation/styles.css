@@ -1,0 +1,107 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: transparent;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.4s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.navbar.scrolled {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+/* Section styling */
+section {
+  padding: 100px 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  background: linear-gradient(to right, #00adb5, #393e46);
+  color: #fff;
+  text-align: center;
+}
+
+.features,
+.about,
+.contact {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+  }
+}
